@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"> <!--sets the  web in english lang-->
+
+<head>
+    <meta charset="UTF-8"> <!--allows a wide set of charachters-->
+    <title> Algebra University </title> <!--tab name-->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!--css for index file-->
+    <script src="script.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap JS (requires Popper.js for modals) -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+
+</head>
+
+<!--
+1. <a href="javascript:void(0);">
+This is an anchor (<a>) tag that is typically used for linking to other pages or resources. 
+However, in this case, it's being used as a trigger for a JavaScript function.
+
+2. class="icon"
+class="icon" is used to style the clickable area as an icon. Can be styled with CSS to ensure the clickable area
+behaves like a button, even though it is an anchor tag.
+
+3. onclick="toggleMenu()"
+onclick="toggleMenu()" attaches a JavaScript function to the anchor tag.
+When the user clicks on the icon, this function will be called to show/hide menu.
+
+HAMBURGER ICON
+==============
+<div class="hamburger">: This is a container for the hamburger icon.
+
+How it All Works Together:
+--------------------------
+The anchor (<a>) is clickable but does not navigate anywhere, thanks to javascript:void(0);.
+When clicked, the onclick="toggleMenu()" triggers the JavaScript function, which toggles
+the class on the navigation menu, making it responsive or hidden.
+Inside the anchor, the hamburger <div> and its three child div elements are styled to look
+like a traditional hamburger menu (three stacked lines).
+The result is a hamburger menu icon that, when clicked, triggers a JavaScript function to
+show or hide the navigation menu (typically used on smaller screens).
+-->
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-kFpEwb_2aQeNh_tKvZ9dYzyX3ipAgit9Mg&s" class = "logoPaola" >
+        <a href="index.html">Home</a>
+        <a href="PAGES/about.html">About Us</a>
+        <a href="PAGES/news.html">News</a>
+        <a href="PAGES/curriculum.html">Curriculum</a>
+        <!--<a href="PAGES/contact.html">Contact</a>-->
+        <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+        <a href="PAGES/login.html">Login/Logout</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </a>
+
+        
+    </div>
+
+       <!-- Modal structure for Contact Page using Bootstrap -->
+       <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Embed the contact page using an iframe -->
+                    <iframe src="PAGES/contact.html" width="100%" height="500px" style="border:none;"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

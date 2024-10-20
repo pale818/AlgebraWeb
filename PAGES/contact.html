@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"> <!--sets the  web in english lang-->
+
+<head>
+    <meta charset="UTF-8"> <!--allows a wide set of charachters-->
+    <title> Algebra University </title> <!--tab name-->
+    <link rel="stylesheet" type="text/css" href="../styles.css"> <!--css for index file-->
+    <link rel="stylesheet" type="text/css" href="contact.css"> 
+    <script src="../script.js"></script>
+
+</head>
+
+<body>
+
+    <!--CONTACT PAGE CODE-->
+
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="https://www.fulek.com/mvc/supit/project-contact-form" method= "POST">
+
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name= "FullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required>
+
+            <label for="importance">Importance:</label>
+            <select id="importance" name="Importance" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="newsletter">
+                <input type="hidden" name="ReceiveNewsletter" value="0">
+                <input type="checkbox" id="newsletter" name="ReceiveNewsletter" th:value="1"> Subscribe to newsletter
+            </label>
+           
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="Message" rows="5" required></textarea>
+
+            <input type="submit" value="submit">
+
+        </form>
+    </div>
+</body>
+
+</html>
