@@ -215,6 +215,14 @@ iframe {
 }
 
 
+
+.textItalic {
+  font-style: italic; /* Make the text italic */
+  font-size: small; /* Adjust font size */
+  padding-left: 120px; /* Add padding to the left */
+  padding-right: 120px; /* Add padding to the right */
+}
+
 /*---------------------------------------------------for mobile*----------------------------------------------*/
 
 @media (max-width: 768px) {
@@ -232,5 +240,11 @@ iframe {
     font-size: 25px;          /* Adjust font size */
     transform: translate(-60%, -30%);
   }
+
+  .textItalic {
+    padding-left: 10px; /* Add padding to the left */
+    padding-right: 10px; /* Add padding to the right */
+  }
+  
 }
 
