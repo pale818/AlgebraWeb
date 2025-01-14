@@ -1,3 +1,6 @@
+/*****************************************************************************************************/ 
+/* MODAL DIALOG */
+/*****************************************************************************************************/ 
 // Function to dynamically load content into the modal based on what the user clicked
 function loadModalContent(menu) {
   const modalTitle = document.getElementById('modalTitle');
@@ -18,8 +21,13 @@ function loadModalContent(menu) {
   const modal = new bootstrap.Modal(document.getElementById('unifiedModal'));
   modal.show();
 }
+/*****************************************************************************************************/ 
 
 
+
+/*****************************************************************************************************/ 
+/* NAVIGATION AND DYNAMIC PAGE LOADING */
+/*****************************************************************************************************/ 
 
 // functions responsible for handling navigation, dinamically loading pages in the MainContent
 function navigateTo(pageName) {
@@ -71,7 +79,13 @@ function loadMainContent(menu) {
   mainContent.appendChild(iframe);
 
 }
+/*****************************************************************************************************/ 
 
+
+
+/*****************************************************************************************************/ 
+/* COLLAPSE MENU PROGRAMMATICALLY FOR MOBILE SCREEN ONCE WHEN SOME MENU IS SELECTED */
+/*****************************************************************************************************/ 
 // listener for navigation bar when small mobile screen is active to collapse nav bar when some link is selected
 // source: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 // https://getbootstrap.com/docs/5.3/components/collapse/#javascript-behavior
@@ -106,9 +120,14 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+/*****************************************************************************************************/ 
 
 
 
+
+/*****************************************************************************************************/ 
+/* NAVIGATE TO SECTION ON THE PAGE */
+/*****************************************************************************************************/ 
 // function used to navigate to some section on the page
 // example is aboutus page which has sections
 // When user clicks on some manu like "history" it starts form the index.html 
@@ -148,3 +167,4 @@ function setNeweMenus(menu) {
       aboutUsMenu.classList.add("d-flex");
   }
 }
+/*****************************************************************************************************/ 
