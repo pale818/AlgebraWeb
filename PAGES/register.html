@@ -16,36 +16,35 @@
 
     <script src="loginRegister.js"></script>
     <script src="../script.js"></script>
-
    
 </head>
 
 <body>
     <div class="container MyLoginDesign"> <!--MyLoginDesign is my own class for font, container is from bootstrap-->
-        <h2 id="formTitle">Login</h2>
+        <h2 id="formTitle">Register</h2>
 
-        <!-- Login Form -->
-        <form id="loginForm">
+        <!-- Register Form (Initially Hidden) -->
+        <form id="registerForm">
             <!-- Username input -->
-            <input type="text" id="loginUsername" class="form-control" required />
-            <label class="form-label" for="loginUsername">Username</label>
 
-            <!-- Password input  -->
-            <input type="password" id="loginPassword" class="form-control" required />
-            <label class="form-label" for="loginPassword">Password</label>
+            <input type="text" id="registerUsername" class="form-control" required />
+            <label class="form-label" for="registerUsername">Username</label>
+          
 
-            <!-- Submit button  -->
-            <button type="submit" class="btn btn-primary btn-block mb-4 w-100"
-                onclick="handleLogin(event)">Login </button>
+            <!-- Password input -->
+         
+            <input type="password" id="registerPassword" class="form-control" required />
+            <label class="form-label" for="registerPassword">Password</label>
             
-            <!-- Alert for displaying login/register errors -->
-            <div id="loginAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
 
+            <!-- Register button -->
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 w-100"
+                onclick="handleRegister(event)">Register</button>
         </form>
-        <div> Don't have an account?  <a href ="#" onclick="navigateTo('register')">Register</a>  </div> 
+        <div> Have an account? <a href ="#" onclick="navigateTo('login')">Login</a>  </div> 
     </div>
-    
-    <iframe src="footer.html"></iframe>
+
+    <iframe src="footer.html" class = "footerFrame"></iframe>
 </body>
 
 </html>

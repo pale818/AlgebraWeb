@@ -5,6 +5,16 @@ function handleLogin(event) {
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
 
+
+    if(username == "" || password == ""){
+
+        const loginAlert = document.getElementById("loginAlert");
+        loginAlert.className = "alert alert-danger";
+        loginAlert.innerHTML = "Login unsuccessful!";
+        loginAlert.style.display = "block";
+        return;
+    }
+
     fetch("https://www.fulek.com/data/api/user/login", {
         method: "POST",
         headers: {
@@ -60,7 +70,7 @@ function handleRegister(event) {
     const username = document.getElementById("registerUsername").value;
     const password = document.getElementById("registerPassword").value;
 
-    fetch("https://www.fulek.com/data/api/user/register", {
+    fetch ("https://www.fulek.com/data/api/user/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
