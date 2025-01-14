@@ -1,8 +1,8 @@
 html, body {
   height: 100%;
   margin: 0; /* Remove default margin */
-  /*display: flex;*/
-  /*flex-direction: column;*/
+  display: flex;
+  flex-direction: column;
   font-family: 'Times New Roman', Times, serif !important;
   overflow-x: hidden; /* Disable horizontal scrolling */
   width: 100%; /* Ensure iframes don't exceed viewport width */
@@ -89,6 +89,7 @@ html, body {
 .MyLoginDesign {
   width: 300px;
   padding-top: 50px;
+  min-height: calc(100vh - 150px); /* Ensure the wrapper is full height */
 }
 iframe {
   width: 100% ;
@@ -105,13 +106,21 @@ iframe {
 }
 
 
+/* Wrapper to contain content and footer */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push footer to the bottom */
+  min-height: 100vh; /* Ensure the wrapper is full height */
+}
 .footerFrame{
   width: 100%;
-  height: 150px;
+  height: 150px !important;
   border: none;
+  margin-top: auto; /* Push the footer to the bottom */
 }
 .footerContent {
-  height: 100%;
+  height: 150px;
   overflow: hidden;
 }
 .footer-text{
