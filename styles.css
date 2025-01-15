@@ -232,6 +232,8 @@ iframe {
   padding-right: 120px; /* Add padding to the right */
 }
 
+
+
 /*---------------------------------------------------for mobile*----------------------------------------------*/
 
 @media (max-width: 768px) {
@@ -254,6 +256,7 @@ iframe {
     padding-left: 10px; /* Add padding to the left */
     padding-right: 10px; /* Add padding to the right */
   }
-  
+
+
 }
 
