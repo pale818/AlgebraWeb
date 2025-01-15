@@ -21,31 +21,34 @@
 </head>
 
 <body>
-    <div class="container MyLoginDesign"> <!--MyLoginDesign is my own class for font, container is from bootstrap-->
-        <h2 id="formTitle">Login</h2>
 
-        <!-- Login Form -->
-        <form id="loginForm">
-            <!-- Username input -->
-            <input type="text" id="loginUsername" class="form-control" required />
-            <label class="form-label" for="loginUsername">Username</label>
+    <div class="page-wrapper">
+        <div class="container MyLoginDesign"> <!--MyLoginDesign is my own class for font, container is from bootstrap-->
+            <h2 id="formTitle">Login</h2>
 
-            <!-- Password input  -->
-            <input type="password" id="loginPassword" class="form-control" required />
-            <label class="form-label" for="loginPassword">Password</label>
+            <!-- Login Form -->
+            <form id="loginForm">
+                <!-- Username input -->
+                <input type="text" id="loginUsername" class="form-control" required />
+                <label class="form-label" for="loginUsername">Username</label>
 
-            <!-- Submit button  -->
-            <button type="submit" class="btn btn-primary btn-block mb-4 w-100"
-                onclick="handleLogin(event)">Login </button>
-            
-            <!-- Alert for displaying login/register errors -->
-            <div id="loginAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+                <!-- Password input  -->
+                <input type="password" id="loginPassword" class="form-control" required />
+                <label class="form-label" for="loginPassword">Password</label>
 
-        </form>
-        <div> Don't have an account?  <a href ="#" onclick="navigateTo('register')">Register</a>  </div> 
+                <!-- Submit button  -->
+                <button type="submit" class="btn btn-primary btn-block mb-4 w-100"
+                    onclick="handleLogin(event)">Login </button>
+                
+                <!-- Alert for displaying login/register errors -->
+                <div id="loginAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+            </form>
+            <div> Don't have an account?  <a href ="#" onclick="navigateTo('register')">Register</a>  </div> 
+        </div>
+        
+        <iframe src="footer.html"></iframe>
     </div>
-    
-    <iframe src="footer.html"></iframe>
 </body>
 
 </html>
